@@ -20,7 +20,7 @@ const Home = () => {
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 >
                     <source
-                        src="src/assets/videos/banner.mp4"
+                        src="https://res.cloudinary.com/ddqunbug9/video/upload/v1749220264/zhsc0mcomdgtai7xu0tg.mp4"
                         type="video/mp4"
                     />
                     Your browser does not support the video tag.

@@ -1,106 +1,152 @@
-# Vietnam Job Explorer
+<div align="center">
 
-Một ứng dụng web phân tích thị trường việc làm Việt Nam, giúp khám phá xu hướng và kỹ năng được yêu cầu nhất trong các ngành nghề.
+# 🇻🇳 Vietnam Job Explorer
 
-## ✨ Tính năng chính
+### *Comprehensive Job Market Analysis Platform*
 
-- 📊 **Phân tích dữ liệu việc làm**: Thống kê và biểu đồ về thị trường việc làm Việt Nam
-- 🔍 **Tìm kiếm việc làm**: Tìm kiếm cơ hội việc làm phù hợp
-- 💡 **Gợi ý kỹ năng**: Khuyến nghị kỹ năng cần thiết cho từng ngành nghề
-- 📈 **Xu hướng toàn cầu**: So sánh thị trường việc làm Việt Nam với thế giới
-- 🎯 **Phân tích kỹ năng**: Thống kê kỹ năng theo quốc gia và ngành nghề
+A modern web application for analyzing Vietnam's job market trends, skill demands, and career insights powered by data-driven analytics.
 
-## 🚀 Demo
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-blue?style=for-the-badge)](https://lovable.dev/projects/20b1cbb8-89a2-4b97-a39c-a5dfa316185d)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![React](https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
-**URL**: https://lovable.dev/projects/20b1cbb8-89a2-4b97-a39c-a5dfa316185d
+---
 
-## 🛠️ Cách chạy dự án
+</div>
 
-Có nhiều cách để chỉnh sửa và chạy ứng dụng này.
+## 🌟 Features
 
-### Sử dụng Lovable (Khuyến nghị)
+<table>
+<tr>
+<td width="50%">
 
-Truy cập [Lovable Project](https://lovable.dev/projects/20b1cbb8-89a2-4b97-a39c-a5dfa316185d) và bắt đầu thay đổi thông qua prompts.
+### 📊 **Market Analytics**
+- Real-time job market statistics
+- Interactive data visualizations
+- Trend analysis and forecasting
+- Industry-specific insights
 
-Các thay đổi được thực hiện qua Lovable sẽ tự động được commit vào repo này.
+### 🔍 **Job Discovery**
+- Advanced job search capabilities
+- Personalized job recommendations
+- Skill-based matching algorithms
+- Location and salary filters
 
-### Chạy trên máy local
+</td>
+<td width="50%">
 
-Nếu bạn muốn làm việc local với IDE của mình, bạn có thể clone repo này và push các thay đổi. Các thay đổi được push cũng sẽ được phản ánh trong Lovable.
+### 💡 **Skill Intelligence**
+- In-demand skills identification
+- Skill gap analysis
+- Learning path recommendations
+- Industry skill requirements
 
-Yêu cầu: Node.js & npm đã được cài đặt - [cài đặt với nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🌐 **Global Comparison**
+- Vietnam vs. global market analysis
+- Cross-country skill comparisons
+- International job trends
+- Competitive insights
 
-Thực hiện các bước sau:
+</td>
+</tr>
+</table>
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- **Node.js** 18+ and npm/yarn
+- Modern web browser
+- Git
+
+### Installation
 
 ```bash
-# Bước 1: Clone repository
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/your-username/vietnam-job-explorer.git
 
-# Bước 2: Di chuyển vào thư mục dự án
+# Navigate to project directory
 cd vietnam-job-explorer
 
-# Bước 3: Cài đặt dependencies
+# Install dependencies
 npm install
 
-# Bước 4: Chạy development server
+# Start development server
 npm run dev
 ```
 
-### Chỉnh sửa trực tiếp trên GitHub
+### 🎯 Development Options
 
-- Điều hướng đến file muốn chỉnh sửa
-- Click nút "Edit" (biểu tượng bút chì) ở góc trên bên phải
-- Thực hiện thay đổi và commit
+| Method | Description | Best For |
+|--------|-------------|----------|
+| **🔥 Lovable** | AI-powered development environment | Quick prototyping & changes |
+| **💻 Local Setup** | Traditional development workflow | Full control & customization |
+| **☁️ Codespaces** | Cloud-based development | Remote collaboration |
+| **📝 GitHub Editor** | Direct file editing | Minor fixes & updates |
 
-### Sử dụng GitHub Codespaces
+## 🛠️ Tech Stack
 
-- Điều hướng đến trang chính của repository
-- Click nút "Code" (nút màu xanh) gần góc trên bên phải
-- Chọn tab "Codespaces"
-- Click "New codespace" để khởi chạy môi trường Codespace mới
-- Chỉnh sửa files trực tiếp trong Codespace và commit & push thay đổi khi hoàn thành
+<div align="center">
 
-## 🏗️ Công nghệ sử dụng
+### Frontend
+![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5-646cff?style=flat-square&logo=vite)
 
-Dự án này được xây dựng với:
+### UI & Styling
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06b6d4?style=flat-square&logo=tailwindcss)
+![shadcn/ui](https://img.shields.io/badge/shadcn/ui-black?style=flat-square)
+![Lucide](https://img.shields.io/badge/Lucide_Icons-f56565?style=flat-square)
 
-- **Frontend Framework**: React 18 với TypeScript
-- **Build Tool**: Vite
-- **UI Components**: shadcn/ui
-- **Styling**: Tailwind CSS
-- **State Management**: TanStack Query (React Query)
-- **HTTP Client**: Axios
-- **Charts**: Recharts
-- **Icons**: Lucide React
-- **Animations**: Lottie React
+### Data & State
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-ef4444?style=flat-square)
+![Axios](https://img.shields.io/badge/Axios-5a29e4?style=flat-square&logo=axios)
+![Recharts](https://img.shields.io/badge/Recharts-22d3ee?style=flat-square)
 
-## 📁 Cấu trúc dự án
+</div>
+
+## 📁 Project Structure
 
 ```
-src/
-├── components/         # Các component tái sử dụng
-│   ├── features/      # Components chức năng chính
-│   ├── layouts/       # Layout components
-│   └── ui/           # UI components (shadcn/ui)
-├── pages/            # Các trang chính
-│   ├── Home.tsx      # Trang chủ
-│   ├── Analytics.tsx # Trang phân tích
-│   ├── FindJobs.tsx  # Trang tìm việc
-│   └── SearchSkills.tsx # Trang tìm kỹ năng
-├── hooks/            # Custom React hooks
-├── services/         # API services
-├── interfaces/       # TypeScript interfaces
-└── lib/             # Utilities và constants
+vietnam-job-explorer/
+├── 📱 src/
+│   ├── 🧩 components/          # Reusable UI components
+│   │   ├── features/           # Feature-specific components
+│   │   ├── layouts/            # Layout components
+│   │   └── ui/                 # Base UI components (shadcn/ui)
+│   ├── 📄 pages/               # Application pages
+│   │   ├── Home.tsx            # Landing page
+│   │   ├── Analytics.tsx       # Data analytics dashboard
+│   │   ├── FindJobs.tsx        # Job search interface
+│   │   └── SearchSkills.tsx    # Skill exploration
+│   ├── 🪝 hooks/               # Custom React hooks
+│   ├── 🌐 services/            # API integration layer
+│   ├── 📋 interfaces/          # TypeScript type definitions
+│   └── 🔧 lib/                 # Utilities and constants
+├── 🎨 public/                  # Static assets
+└── ⚙️ config files             # Build and development configuration
 ```
 
-## How can I deploy this project?
+## 🤝 Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/20b1cbb8-89a2-4b97-a39c-a5dfa316185d) and click on Share -> Publish.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
 
-## Can I connect a custom domain to my Lovable project?
+- 🐛 Bug reports
+- 💡 Feature requests
+- 🔧 Code contributions
+- 📖 Documentation improvements
 
-Yes, you can!
+## 📄 License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+<div align="center">
+
+**Made with ❤️ for the Vietnamese tech community**
+
+[🌟 Star this repo](https://github.com/your-username/vietnam-job-explorer) • [🐛 Report Bug](https://github.com/your-username/vietnam-job-explorer/issues) • [💡 Request Feature](https://github.com/your-username/vietnam-job-explorer/issues)
+
+</div>
