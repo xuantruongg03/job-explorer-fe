@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🇻🇳 Vietnam Job Explorer
+# Job Explorer
 
 ### *Advanced Job Market Intelligence & Skills Analytics Platform*
 
-A sophisticated web application providing comprehensive analysis of Vietnam's job market landscape, skill demand insights, and career opportunity discovery through interactive data visualizations and real-time analytics.
+A sophisticated web application providing comprehensive analysis of Vietnam's and the world's job market landscape, skill demand insights, and career opportunity discovery through interactive data visualizations and real-time analytics.
 
 [![React](https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -137,7 +137,7 @@ npm run dev
 ## � Project Architecture
 
 ```
-vietnam-job-explorer/
+job-explorer-fe/
 ├── 📱 src/
 │   ├── 🧩 components/
 │   │   ├── features/              # Feature-specific components
@@ -238,49 +238,6 @@ This project utilizes **shadcn/ui** components built on top of **Radix UI** prim
 - **TypeScript Intellisense**: Full IDE support
 - **Component Dev Tools**: React Developer Tools compatibility
 - **Debug Support**: Source maps for easy debugging
-
-## 🤝 Contributing
-
-We welcome contributions to make Vietnam Job Explorer even better! Here's how you can help:
-
-### 🐛 Bug Reports
-1. Check existing issues to avoid duplicates
-2. Provide detailed reproduction steps
-3. Include browser/OS information
-4. Add screenshots if applicable
-
-### 💡 Feature Requests  
-1. Describe the feature and its benefits
-2. Explain the use case scenario
-3. Consider implementation complexity
-4. Discuss with maintainers first
-
-### 🔧 Code Contributions
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Follow existing code style and conventions
-4. Add tests for new functionality
-5. Update documentation as needed
-6. Commit changes: `git commit -m 'Add amazing feature'`
-7. Push to branch: `git push origin feature/amazing-feature`
-8. Open a Pull Request
-
-### � Documentation
-- Improve README documentation
-- Add code comments and JSDoc
-- Create examples and tutorials
-- Update API documentation
-
-## � Deployment
-
-### Production Build
-```bash
-# Create optimized production build
-bun run build
-
-# Preview production build locally
-bun run preview
-```
 
 ### Environment Variables
 Create `.env` file in project root:
