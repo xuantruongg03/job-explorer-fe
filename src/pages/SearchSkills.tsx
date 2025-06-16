@@ -51,7 +51,7 @@ function SearchSkills() {
     });
 
     const handleSkillChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSkillName(e.target.value.trim());
+        setSkillName(e.target.value);
     };    
     if (isLoading) {
         return <Loading />;
@@ -113,9 +113,7 @@ function SearchSkills() {
                                 </Select>
                             </div>                        </div>
                     </CardContent>
-                </Card>
-
-                {/* Content */}
+                </Card>                {/* Content */}
                 {isLoadingSearch ? (
                     <div className="space-y-8">
                         {/* Loading Stats */}
@@ -159,7 +157,23 @@ function SearchSkills() {
                             </div>
                         </CardContent>
                     </Card>
-                ) : skillSearchData?.data?.top_skills.length === 0 ? (
+                ) : !skillSearchData?.data ? (
+                    <Card className="bg-white/80 backdrop-blur-lg border-0 shadow-xl rounded-3xl">
+                        <CardContent className="p-16 text-center">
+                            <div className="max-w-md mx-auto">
+                                <div className="bg-gradient-to-r from-gray-400 to-gray-500 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                                    <Search className="h-12 w-12 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                                    Preparing Results...
+                                </h3>
+                                <p className="text-gray-600 text-lg leading-relaxed">
+                                    Please wait while we analyze the skill data for "{skillName}" in {selectedCountry}.
+                                </p>
+                            </div>
+                        </CardContent>
+                    </Card>
+                ) : skillSearchData?.data?.skills?.length === 0 ? (
                     <Card className="bg-white/80 backdrop-blur-lg border-0 shadow-xl rounded-3xl">
                         <CardContent className="p-16">
                             <EmptyState message="No data available for the searched skill and country. Try a different skill or country." />
@@ -196,7 +210,7 @@ function SearchSkills() {
                                                 <Star className="h-7 w-7" />
                                             </div>
                                             <div className="text-right">
-                                                <div className="text-3xl font-bold">{skillSearchData?.data?.top_skills.length || 0}</div>
+                                                <div className="text-3xl font-bold">{skillSearchData?.data?.top_skills?.length || 0}</div>
                                                 <div className="text-emerald-100 text-sm">Skill Variations</div>
                                             </div>
                                         </div>
@@ -245,29 +259,34 @@ function SearchSkills() {
                             </Card>
                         </div>                        {/* Enhanced Skills Analysis Charts */}
                         <div className="mb-12">
-                            <Card className="bg-white/80 backdrop-blur-lg border-0 shadow-xl rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
-                                <CardHeader className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8">                                    <CardTitle className="text-2xl font-bold flex items-center gap-3">
+                            <Card className="bg-white/80 backdrop-blur-lg border-0 shadow-xl rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-300">                                <CardHeader className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8">                                    <CardTitle className="text-2xl font-bold flex items-center gap-3">
                                         <BarChart3 className="h-8 w-8" />
-                                        Skill Demand Analysis (Top 20)
+                                        Skill Demand Analysis (Top 15)
                                     </CardTitle>
                                     <CardDescription className="text-blue-100 text-lg">
-                                        Distribution of top skills with "Other" category for remaining skills
+                                        Distribution of top skills with "Other Skills" category for remaining skills
                                     </CardDescription>
-                                </CardHeader>                                <CardContent className="p-8">
-                                    <ResponsiveContainer width="100%" height={500}>
-                                        <PieChart>
-                                            <Pie
+                                </CardHeader><CardContent className="p-8">
+                                    <ResponsiveContainer width="100%" height={600}>
+                                        <PieChart>                                            <Pie
                                                 data={(() => {
-                                                    const topSkills = skillSearchData?.data?.top_skills.slice(0, 20) || [];
-                                                    const totalTopFrequency = topSkills.reduce((sum: number, skill: any) => sum + skill.frequency, 0);
+                                                    const topSkills = skillSearchData?.data?.top_skills.slice(0, 15) || [];
                                                     const totalFrequency = skillSearchData?.data?.total_jobs || 1;
+                                                    
+                                                    // Tính lại phần trăm cho từng skill dựa trên tổng jobs
+                                                    const skillsWithCorrectPercentage = topSkills.map((skill: any) => ({
+                                                        ...skill,
+                                                        percentage: parseFloat(((skill.frequency / totalFrequency) * 100).toFixed(1))
+                                                    }));
+                                                    
+                                                    const totalTopFrequency = topSkills.reduce((sum: number, skill: any) => sum + skill.frequency, 0);
                                                     const otherFrequency = Math.max(0, totalFrequency - totalTopFrequency);
                                                     const otherPercentage = ((otherFrequency / totalFrequency) * 100).toFixed(1);
                                                     
-                                                    const result = [...topSkills];
+                                                    const result = [...skillsWithCorrectPercentage];
                                                     if (otherFrequency > 0) {
                                                         result.push({
-                                                            skill: 'Other',
+                                                            skill: 'Other Skills',
                                                             frequency: otherFrequency,
                                                             percentage: parseFloat(otherPercentage)
                                                         });
@@ -275,15 +294,15 @@ function SearchSkills() {
                                                     return result;
                                                 })()}
                                                 cx="50%"
-                                                cy="50%"
+                                                cy="45%"
                                                 labelLine={false}
-                                                label={({ skill, percentage }) => `${skill}: ${percentage}%`}
-                                                outerRadius={160}
+                                                label={({ skill, percentage }) => percentage >= 3 ? `${percentage}%` : ''}
+                                                outerRadius={140}
                                                 fill="#8884d8"
                                                 dataKey="frequency"
                                             >
                                                 {(() => {
-                                                    const topSkills = skillSearchData?.data?.top_skills.slice(0, 20) || [];
+                                                    const topSkills = skillSearchData?.data?.top_skills.slice(0, 15) || [];
                                                     const totalTopFrequency = topSkills.reduce((sum: number, skill: any) => sum + skill.frequency, 0);
                                                     const totalFrequency = skillSearchData?.data?.total_jobs || 1;
                                                     const otherFrequency = Math.max(0, totalFrequency - totalTopFrequency);
@@ -291,8 +310,7 @@ function SearchSkills() {
                                                     const colors = [
                                                         '#3b82f6', '#06b6d4', '#8b5cf6', '#ec4899', '#10b981', 
                                                         '#f59e0b', '#ef4444', '#6366f1', '#14b8a6', '#f97316',
-                                                        '#8b5a3c', '#7c3aed', '#dc2626', '#059669', '#2563eb',
-                                                        '#7c2d12', '#991b1b', '#166534', '#1e40af', '#92400e'
+                                                        '#8b5a3c', '#7c3aed', '#dc2626', '#059669', '#2563eb'
                                                     ];
                                                     
                                                     const result = topSkills.map((entry: any, index: number) => (
@@ -310,28 +328,46 @@ function SearchSkills() {
                                                 contentStyle={{
                                                     backgroundColor: "rgba(255,255,255,0.95)",
                                                     border: "none",
-                                                    borderRadius: "16px",
-                                                    boxShadow: "0 25px 50px -12px rgba(0,0,0,0.25)",
-                                                    padding: "16px"
+                                                    borderRadius: "12px",
+                                                    boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1)",
+                                                    padding: "12px",
+                                                    fontSize: "14px"
                                                 }}
                                                 formatter={(value: any, name: any, props: any) => [
-                                                    `${value} occurrences (${props.payload.percentage}%)`,
-                                                    props.payload.skill,
+                                                    `${value} jobs (${props.payload.percentage}%)`,
+                                                    'Frequency'
                                                 ]}
+                                                labelFormatter={(label: any, payload: any) => {
+                                                    if (payload && payload[0]) {
+                                                        return payload[0].payload.skill;
+                                                    }
+                                                    return label;
+                                                }}
                                             />
                                             <Legend 
                                                 verticalAlign="bottom" 
-                                                height={80}
+                                                height={120}
                                                 wrapperStyle={{
-                                                    paddingTop: '20px',
-                                                    fontSize: '12px'
+                                                    paddingTop: '30px',
+                                                    fontSize: '12px',
+                                                    maxHeight: '100px',
+                                                    overflowY: 'auto'
                                                 }}
-                                                formatter={(value: string) => 
-                                                    value.length > 20 ? value.substring(0, 20) + "..." : value
-                                                }
+                                                formatter={(value: string, entry: any) => {
+                                                    const skill = entry.payload?.skill || value;
+                                                    const percentage = entry.payload?.percentage || 0;
+                                                    return (
+                                                        <span style={{ color: entry.color, fontWeight: '500' }}>
+                                                            {skill.length > 25 ? skill.substring(0, 25) + "..." : skill} ({percentage}%)
+                                                        </span>
+                                                    );
+                                                }}
+                                                layout="horizontal"
+                                                align="center"
+                                                iconType="circle"
                                             />
                                         </PieChart>
-                                    </ResponsiveContainer>                                </CardContent>
+                                    </ResponsiveContainer></CardContent>
                             </Card>
                         </div>{/* Enhanced Detailed Skills Results */}
                         <Card className="bg-white/80 backdrop-blur-lg border-0 shadow-xl rounded-3xl overflow-hidden">

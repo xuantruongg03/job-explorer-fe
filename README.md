@@ -2,151 +2,289 @@
 
 # 🇻🇳 Vietnam Job Explorer
 
-### *Comprehensive Job Market Analysis Platform*
+### *Advanced Job Market Intelligence & Skills Analytics Platform*
 
-A modern web application for analyzing Vietnam's job market trends, skill demands, and career insights powered by data-driven analytics.
+A sophisticated web application providing comprehensive analysis of Vietnam's job market landscape, skill demand insights, and career opportunity discovery through interactive data visualizations and real-time analytics.
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-blue?style=for-the-badge)](https://lovable.dev/projects/20b1cbb8-89a2-4b97-a39c-a5dfa316185d)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![React](https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Bun](https://img.shields.io/badge/Bun-Runtime-f9f1e1?style=for-the-badge&logo=bun)](https://bun.sh/)
 
 ---
 
 </div>
 
-## 🌟 Features
+## ✨ Key Features
 
 <table>
 <tr>
 <td width="50%">
 
-### 📊 **Market Analytics**
-- Real-time job market statistics
-- Interactive data visualizations
-- Trend analysis and forecasting
-- Industry-specific insights
+### 📊 **Smart Analytics Dashboard**
+- Job market statistics for Vietnam and the world
+- Skill demand analysis with interactive charts
+- Interactive pie charts and data visualizations
+- Global vs Vietnam market comparisons
+- Trend analysis with historical data
 
-### 🔍 **Job Discovery**
-- Advanced job search capabilities
-- Personalized job recommendations
-- Skill-based matching algorithms
-- Location and salary filters
+### 🎯 **Intelligent Job Search**
+- Advanced search with multiple filters
+- Location-based job discovery
+- Industry and skill-based filtering
+- Detailed job requirement analysis
 
 </td>
 <td width="50%">
 
-### 💡 **Skill Intelligence**
-- In-demand skills identification
-- Skill gap analysis
-- Learning path recommendations
-- Industry skill requirements
+### 🧠 **Skills Intelligence Engine**
+- Top 15 most in-demand skills analysis
+- Skill frequency and market share metrics
+- Interactive skill demand pie charts
+- Country-specific skill requirements
 
-### 🌐 **Global Comparison**
-- Vietnam vs. global market analysis
-- Cross-country skill comparisons
-- International job trends
-- Competitive insights
+### 📈 **Market Insights**
+- Job posting frequency analysis
+- Skill trend predictions
+- Career opportunity mapping
+- Competitive market analysis
 
 </td>
 </tr>
 </table>
 
+## 🌐 Application Pages
+
+| Page | Route | Description | Key Features |
+|------|-------|-------------|--------------|
+| **🏠 Home** | `/` | Landing page with market overview | Hero section, featured statistics, quick navigation |
+| **📊 Analytics** | `/analytics` | Comprehensive market dashboard | Job trends charts, skills analysis, global comparisons |
+| **💼 Find Jobs** | `/find-jobs` | Job search and discovery | Advanced filters, job listings, detailed descriptions |
+| **🔍 Search Skills** | `/search-skills` | Skills demand analysis | Skill search, pie charts, market statistics |
+| **ℹ️ About** | `/about` | Project information | Mission, team, technology overview |
+| **📞 Contact** | `/contact` | Contact information | Team contacts, support channels |
+
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- **Node.js** 18+ and npm/yarn
-- Modern web browser
-- Git
+- **Bun** 1.0+ (recommended) or **Node.js** 21+
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Git for version control
 
-### Installation
+### Installation & Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/vietnam-job-explorer.git
+git clone https://github.com/xuantruongg003/job-explorer-fe.git
 
 # Navigate to project directory
-cd vietnam-job-explorer
+cd job-explorer-fe
 
-# Install dependencies
+# Install dependencies (using Bun - recommended)
+bun install
+
+# Or using npm
 npm install
 
 # Start development server
+bun run dev
+# Or using npm
 npm run dev
+
+# Open browser and navigate to http://localhost:5173
 ```
 
-### 🎯 Development Options
+### 🔧 Available Scripts
 
-| Method | Description | Best For |
-|--------|-------------|----------|
-| **🔥 Lovable** | AI-powered development environment | Quick prototyping & changes |
-| **💻 Local Setup** | Traditional development workflow | Full control & customization |
-| **☁️ Codespaces** | Cloud-based development | Remote collaboration |
-| **📝 GitHub Editor** | Direct file editing | Minor fixes & updates |
+| Script | Command | Description |
+|--------|---------|-------------|
+| **Development** | `bun run dev` | Start Vite development server with hot reload |
+| **Build** | `bun run build` | Create production build |
+| **Build (Dev)** | `bun run build:dev` | Create development build |
+| **Preview** | `bun run preview` | Preview production build locally |
+| **Lint** | `bun run lint` | Run ESLint for code quality checks |
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 <div align="center">
 
-### Frontend
-![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-5-646cff?style=flat-square&logo=vite)
+### Core Framework
+![React](https://img.shields.io/badge/React-18.3-61dafb?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178c6?style=flat-square&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=flat-square&logo=vite)
+![Bun](https://img.shields.io/badge/Bun-Runtime-f9f1e1?style=flat-square&logo=bun)
 
 ### UI & Styling
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06b6d4?style=flat-square&logo=tailwindcss)
-![shadcn/ui](https://img.shields.io/badge/shadcn/ui-black?style=flat-square)
-![Lucide](https://img.shields.io/badge/Lucide_Icons-f56565?style=flat-square)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06b6d4?style=flat-square&logo=tailwindcss)
+![shadcn/ui](https://img.shields.io/badge/shadcn/ui-Latest-000000?style=flat-square)
+![Radix UI](https://img.shields.io/badge/Radix_UI-Primitives-8b5cf6?style=flat-square)
+![Lucide React](https://img.shields.io/badge/Lucide_Icons-0.462-f56565?style=flat-square)
 
-### Data & State
-![TanStack Query](https://img.shields.io/badge/TanStack_Query-ef4444?style=flat-square)
-![Axios](https://img.shields.io/badge/Axios-5a29e4?style=flat-square&logo=axios)
-![Recharts](https://img.shields.io/badge/Recharts-22d3ee?style=flat-square)
+### Data Management & Charts
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-5.56-ff4154?style=flat-square)
+![Axios](https://img.shields.io/badge/Axios-1.9-5a29e4?style=flat-square&logo=axios)
+![Recharts](https://img.shields.io/badge/Recharts-2.12-22d3ee?style=flat-square)
+![React Router](https://img.shields.io/badge/React_Router-6.26-ca4245?style=flat-square&logo=reactrouter)
+
+### Development Tools
+![ESLint](https://img.shields.io/badge/ESLint-9.9-4b32c3?style=flat-square&logo=eslint)
+![PostCSS](https://img.shields.io/badge/PostCSS-8.4-dd3a0a?style=flat-square&logo=postcss)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-7.53-ec5990?style=flat-square)
 
 </div>
 
-## 📁 Project Structure
+## � Project Architecture
 
 ```
 vietnam-job-explorer/
 ├── 📱 src/
-│   ├── 🧩 components/          # Reusable UI components
-│   │   ├── features/           # Feature-specific components
-│   │   ├── layouts/            # Layout components
-│   │   └── ui/                 # Base UI components (shadcn/ui)
-│   ├── 📄 pages/               # Application pages
-│   │   ├── Home.tsx            # Landing page
-│   │   ├── Analytics.tsx       # Data analytics dashboard
-│   │   ├── FindJobs.tsx        # Job search interface
-│   │   └── SearchSkills.tsx    # Skill exploration
-│   ├── 🪝 hooks/               # Custom React hooks
-│   ├── 🌐 services/            # API integration layer
-│   ├── 📋 interfaces/          # TypeScript type definitions
-│   └── 🔧 lib/                 # Utilities and constants
-├── 🎨 public/                  # Static assets
-└── ⚙️ config files             # Build and development configuration
+│   ├── 🧩 components/
+│   │   ├── features/              # Feature-specific components
+│   │   │   ├── JobMatch.tsx       # Job matching functionality
+│   │   │   └── RecommendSkills.tsx # Skill recommendations
+│   │   ├── layouts/               # Layout & page components  
+│   │   │   ├── EmptyState.tsx     # Empty state handler
+│   │   │   ├── Footer.tsx         # Application footer
+│   │   │   ├── GlobalJobsChart.tsx # Global job statistics
+│   │   │   ├── GlobalSkillsChart.tsx # Global skills analysis
+│   │   │   ├── Layout.tsx         # Main layout wrapper
+│   │   │   ├── Loading.tsx        # Loading states
+│   │   │   ├── Nav.tsx           # Navigation component
+│   │   │   ├── SkillsByCountry.tsx # Country-specific skills
+│   │   │   ├── VietNamJobsChart.tsx # Vietnam job data
+│   │   │   └── VietnamSkillsChart.tsx # Vietnam skills data
+│   │   └── ui/                    # shadcn/ui components (40+ components)
+│   │       ├── button.tsx         # Button component
+│   │       ├── card.tsx          # Card component
+│   │       ├── chart.tsx         # Chart components
+│   │       ├── input.tsx         # Input component
+│   │       ├── select.tsx        # Select component
+│   │       └── ... (and many more)
+│   ├── 📄 pages/                  # Application pages
+│   │   ├── About.tsx             # About page
+│   │   ├── Analytics.tsx         # Analytics dashboard
+│   │   ├── Contact.tsx           # Contact page
+│   │   ├── FindJobs.tsx          # Job search page
+│   │   ├── Home.tsx             # Landing page
+│   │   ├── NotFound.tsx         # 404 error page
+│   │   └── SearchSkills.tsx     # Skills analysis page
+│   ├── 🪝 hooks/                  # Custom React hooks
+│   │   ├── use-debounce.ts       # Debounce hook
+│   │   ├── use-intersection-observer.ts # Intersection observer
+│   │   ├── use-job-data.ts       # Job data management
+│   │   ├── use-mobile.tsx        # Mobile detection
+│   │   └── use-toast.ts          # Toast notifications
+│   ├── 🌐 services/               # API integration
+│   │   └── analyze.ts            # Analytics API service
+│   ├── 🌐 apis/                   # API client setup
+│   │   └── client.ts             # HTTP client configuration
+│   ├── 📋 interfaces/             # TypeScript definitions
+│   │   └── job.ts                # Job-related types
+│   ├── 🔧 lib/                    # Utilities & constants
+│   │   ├── constant.ts           # App constants
+│   │   └── utils.ts              # Utility functions
+│   └── 🎨 assets/                 # Static assets
+│       └── videos/
+│           └── banner.mp4        # Video assets
+├── 🎨 public/                     # Public static files
+│   ├── favicon.ico               # App favicon
+│   ├── placeholder.svg           # Placeholder images
+│   └── robots.txt               # SEO robots file
+└── ⚙️ Configuration Files
+    ├── components.json           # shadcn/ui config
+    ├── eslint.config.js         # ESLint configuration
+    ├── postcss.config.js        # PostCSS config
+    ├── tailwind.config.ts       # Tailwind CSS config
+    ├── tsconfig.json            # TypeScript config
+    ├── tsconfig.app.json        # App-specific TS config
+    ├── tsconfig.node.json       # Node-specific TS config
+    └── vite.config.ts           # Vite build config
 ```
+
+## 🎨 UI Components Library
+
+This project utilizes **shadcn/ui** components built on top of **Radix UI** primitives, providing:
+
+- **40+ Pre-built Components**: Buttons, Cards, Charts, Forms, Navigation, and more
+- **Fully Accessible**: ARIA-compliant components following accessibility best practices  
+- **Customizable**: Tailwind CSS styling with theme support
+- **Type-safe**: Full TypeScript support with proper type definitions
+- **Modern Design**: Beautiful, consistent design system
+
+### Key Component Categories
+- **🎛️ Form Controls**: Input, Select, Checkbox, Radio, Switch, Slider
+- **📊 Data Display**: Card, Table, Badge, Avatar, Progress, Charts
+- **🧭 Navigation**: Tabs, Breadcrumb, Pagination, Command Menu
+- **💬 Feedback**: Toast, Alert, Dialog, Popover, Tooltip
+- **📱 Layout**: Separator, Accordion, Collapsible, Resizable Panels
+
+## 🔧 Development Features
+
+### Code Quality & Standards
+- **ESLint**: Advanced linting with React-specific rules
+- **TypeScript**: Strict type checking for better code reliability
+- **Prettier Integration**: Consistent code formatting
+- **Path Aliases**: Clean imports using `@/` prefix
+
+### Performance Optimizations  
+- **Vite**: Lightning-fast build tool with HMR
+- **Code Splitting**: Automatic route-based code splitting
+- **Tree Shaking**: Eliminate unused code in production
+- **Asset Optimization**: Automatic image and asset optimization
+
+### Development Tools
+- **Hot Reload**: Instant updates during development
+- **TypeScript Intellisense**: Full IDE support
+- **Component Dev Tools**: React Developer Tools compatibility
+- **Debug Support**: Source maps for easy debugging
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
+We welcome contributions to make Vietnam Job Explorer even better! Here's how you can help:
 
-- 🐛 Bug reports
-- 💡 Feature requests
-- 🔧 Code contributions
-- 📖 Documentation improvements
+### 🐛 Bug Reports
+1. Check existing issues to avoid duplicates
+2. Provide detailed reproduction steps
+3. Include browser/OS information
+4. Add screenshots if applicable
 
-## 📄 License
+### 💡 Feature Requests  
+1. Describe the feature and its benefits
+2. Explain the use case scenario
+3. Consider implementation complexity
+4. Discuss with maintainers first
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### 🔧 Code Contributions
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Follow existing code style and conventions
+4. Add tests for new functionality
+5. Update documentation as needed
+6. Commit changes: `git commit -m 'Add amazing feature'`
+7. Push to branch: `git push origin feature/amazing-feature`
+8. Open a Pull Request
 
----
+### � Documentation
+- Improve README documentation
+- Add code comments and JSDoc
+- Create examples and tutorials
+- Update API documentation
 
-<div align="center">
+## � Deployment
 
-**Made with ❤️ for the Vietnamese tech community**
+### Production Build
+```bash
+# Create optimized production build
+bun run build
 
-[🌟 Star this repo](https://github.com/your-username/vietnam-job-explorer) • [🐛 Report Bug](https://github.com/your-username/vietnam-job-explorer/issues) • [💡 Request Feature](https://github.com/your-username/vietnam-job-explorer/issues)
+# Preview production build locally
+bun run preview
+```
 
-</div>
+### Environment Variables
+Create `.env` file in project root:
+```env
+VITE_SERVER_URL=your_api_endpoint
+```
+

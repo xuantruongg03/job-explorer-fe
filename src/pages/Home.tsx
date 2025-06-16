@@ -184,8 +184,8 @@ const Home = () => {
             </section>            {/* Company Overview */}
             <section 
                 ref={companySectionRef}
-                className={`py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 transition-all duration-100 ${
-                    companySectionAnimated ? 'scale-100' : 'scale-95 opacity-0 translate-y-10'
+                className={`py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 transition-all duration-700 ${
+                    companySectionAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
                 }`}
             >
                 <div className="container mx-auto px-4">
