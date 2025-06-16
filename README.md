@@ -5,7 +5,8 @@
 ### *Advanced Job Market Intelligence & Skills Analytics Platform*
 
 A sophisticated web application providing comprehensive analysis of Vietnam's and the world's job market landscape, skill demand insights, and career opportunity discovery through interactive data visualizations and real-time analytics.
-
+[![Live demo](https://img.shields.io/badge/Live_Demo-Available-4ade80?style=for-the-badge)](https://job-explorer-fe.vercel.app)
+[![GitHub Stars](https://img.shields.io/github/stars/xuantruongg003/job-explorer-fe?style=for-the-badge&color=yellow)](https://github.com/xuantruongg003/job-explorer-fe)
 [![React](https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
